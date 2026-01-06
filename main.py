@@ -5,7 +5,7 @@ app = FastAPI()
  
 @app.get("/")
 def read_root():
-    html_content = "<h2>Hi, man!</h2>"
+    html_content = "<h2>Hi, man! What's up?</h2>"
     return HTMLResponse(content=html_content)
 
  
