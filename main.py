@@ -1,15 +1,26 @@
-from fastapi import FastAPI
+from fastapi import FastAPI, Body
 from fastapi.responses import HTMLResponse
+from fastapi.responses import FileResponse
  
 app = FastAPI()
  
 @app.get("/")
-def read_root():
-    html_content = "<h2>Hi, man! What's up?</h2>"
-    return HTMLResponse(content=html_content)
+def root():
+    return FileResponse("templates/index.html")
 
  
 @app.get("/about")
-def read_root():
+def about():
     html_content = "<h2>My name is Konstantin</h2>"
     return HTMLResponse(content=html_content)
+
+ 
+@app.get("/getdata/{id}")
+def getdata(id):
+    return {"id": id}
+
+@app.post("/user")
+def user(data = Body()):
+    name = data["name"]
+    age = data["age"]
+    return {"message": f"{name}, ваш возраст - {age}"}
