@@ -1,6 +1,5 @@
 /venv*/
 *pycache*/
 requirements*
-Dockerfile
 .dockerignore
 .gitignore
