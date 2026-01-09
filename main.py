@@ -23,4 +23,4 @@ def getdata(id):
 def user(data = Body()):
     name = data["name"]
     age = data["age"]
-    return {"message": f"{name}, ваш возраст - {age}"}
+    return {"message": f"{name}, ваш возраст - {age}!!!"}

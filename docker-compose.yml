@@ -1,0 +1,9 @@
+services:
+  bot:
+    image: ${IMAGE_REF}
+    container_name: mount-k
+    restart: always
+    environment:
+      - OPEN_API_KEY=${OPEN_API_KEY}
+    ports:
+      -"8005:8088"
