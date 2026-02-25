@@ -36,3 +36,6 @@ typing-inspection==0.4.2
     # via pydantic
 uvicorn==0.40.0
     # via -r requirements.in
+numpy
+pillow
+opencv-python
